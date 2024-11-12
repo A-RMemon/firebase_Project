@@ -1,0 +1,49 @@
+create element
+append child
+todo app = > input
+crud
+con =>
+conf
+
+this => for targeting
+
+local storage
+app => async storage for mobile app react native
+firebase : token
+autoLogin = > token : week
+login 
+session storage
+
+localstorage propties
+
+setitem = > key : value
+get item for get data from localstorage by only key name 
+clear() for clear localstorage
+
+obj = : key : value
+
+obj = > JSON javascript object notaion 
+
+JSON.Stringify =-> to change data from array to String to push data in localstorage
+JSON.parse = -> to change data from string to array this method is used to get data from localstorage
+
+we are using non sql 
+
+difference between sql and non sql 
+
+sql main primary key foriegn key hoti hai jis ka apas main relation hota hai jis ko table khty hain
+
+non sql main koi table nhi hota non sql main sirf user uids banaty hain jis ko apny hisaab sy fit krty hain
+
+await firebase.database().ref("todos").child(userID).child(e.id).remove()
+
+await firebase.database().ref('todos').child(userID).child(key).update({
+            todo :  input.value
+        })
+
+await firebase.database().ref('todos').child(userID).get()
+        .then (snap)
+
+await firebase.database().ref('todos').child(userID).child(key).set(object)
+
+

@@ -1,0 +1,18 @@
+.input_text{
+    width: 100%;
+}
+
+.showdark{
+    background-color: black;
+    color: white;
+}
+#loading{
+    width: 100%;
+    height: 100vh;
+}
+#loading img{
+    /* width: 1200px; */
+    width: 100% ;
+    height: 100vh;
+    
+}
