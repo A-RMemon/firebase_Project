@@ -245,9 +245,9 @@ async function getUserData() {
 
     await firebase.database().ref('users').child(userID).get()
         .then((snap) => {
-            console.log(snap.val().email)
-            console.log(snap.val().name)
-            email.innerText = snap.val().email
+            // console.log(snap.val().email)
+            // console.log(snap.val().name)
+            // email.innerText = snap.val().email
             username.innerText = snap.val().name
             image.src = snap.val().photo
             image.style.width=150+'px';
