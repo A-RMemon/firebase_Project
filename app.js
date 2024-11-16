@@ -11,6 +11,7 @@ let email = document.querySelector('#email')
 let logoutbtn = document.getElementById('logoutbtn')
 let loading = document.getElementById('loading')
 let datashow = document.getElementById('datashow')
+let image = document.getElementById('image')
 
 var checkbox = document.getElementById("checkbox")
 var checkBoxSelected = false;
@@ -241,12 +242,18 @@ window.onload = function () {
     }
 }
 async function getUserData() {
+
     await firebase.database().ref('users').child(userID).get()
         .then((snap) => {
             console.log(snap.val().email)
             console.log(snap.val().name)
             email.innerText = snap.val().email
             username.innerText = snap.val().name
+            image.src = snap.val().photo
+            image.style.width=150+'px';
+            image.style.height=150+'px';
+            image.style.borderRadius=100+'%'
+
           
 
         })

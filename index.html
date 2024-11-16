@@ -23,7 +23,7 @@ body{
 }
 .container{
     width: 400px;
-    height: 530px;
+    height: auto;
     background: rgba(0,0,0,0.5);
     backdrop-filter: blur(10px);
     border-radius: 40px;
@@ -114,9 +114,15 @@ p a:hover{
     outline: none;
     border: none;
 }
+.log-icon{
+    display: flex;
+}
 .icon i{
-    background: #000000;
+    /* background: #000000; */
+    background: transparent;
     color: white;
+    margin-left: 20px;
+    font-size: 20px;
 }
     </style>
 </head>
@@ -140,11 +146,12 @@ p a:hover{
             <label for="password" > create password</label>
             <i class="fa-solid fa-lock"></i>
         </div>
-        <p><input type="checkbox" id="checkbox" /> accept term & <a href="#">conditions</a></p>
+        <input type="file" required accept=".jpg,.png,.gif" style="border: none;" id="imageupload">
+        <p><input type="checkbox" id="checkbox" required /> accept term & <a href="#">conditions</a></p>
         <input type="button" value="create account" id="btn" />
         <div class="log-icon">
             <div class="icon"><i class="fa-brands fa-google" id="google"></i></div>
-            <div class="icon"></div>
+            <div class="icon"><i class="fa-brands fa-github" id="github"></i></div>
         </div>
         <p>already have an account <a href="#" onclick="window.location.replace('login page.html')">login</a></p>
     </form>
