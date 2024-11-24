@@ -52,11 +52,11 @@ alert('your password is to short')
     })
     .then((resp)=> resp.json())
     .then(async (data)=>{
-      console.log(data.secure_url)
+      // console.log(data.secure_url)
       
   await firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
         .then(async (user) => {
-            console.log(user.user.uid)
+            // console.log(user.user.uid)
             let userobject = {
                 name: username.value,
                 email: email.value,
@@ -78,7 +78,7 @@ alert('your password is to short')
     })
   }
   catch(e){
-    console.log(e.message)
+    // console.log(e.message)
 
   }
     }
@@ -87,7 +87,10 @@ alert('your password is to short')
 })
 
 googlesingin.addEventListener('click',async function () {
-    console.log('hello')
+  if(!checkbox.checked){
+    alert('please accept terms and conditions')
+  }
+    // console.log('hello')
     var provider = new firebase.auth.GoogleAuthProvider();
     provider.setCustomParameters({
         prompt : 'select_account'
@@ -97,10 +100,10 @@ googlesingin.addEventListener('click',async function () {
     var credential = result.credential;
     var token = credential.accessToken;
     var user = result.user;
-    console.log(result)
-    console.log(user.email)
-    console.log(user.photoURL)
-    console.log(user.uid)
+    // console.log(result)
+    // console.log(user.email)
+    // console.log(user.photoURL)
+    // console.log(user.uid)
     var object = {
         email : user.email,
         photo : user.photoURL,

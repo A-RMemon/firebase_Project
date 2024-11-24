@@ -1,4 +1,4 @@
-var maincontent = document.getElementById("maincontent")
+    var maincontent = document.getElementById("maincontent")
 var input = document.getElementById("input")
 var addbtn = document.getElementById("addbtn")
 var deletebtn = document.getElementById("deletebtn")
@@ -19,12 +19,12 @@ var checkBoxSelected = false;
 logoutbtn.addEventListener('click', async function () {
     try {
         await firebase.auth().signOut()
-        console.log('user signed out')
+        // console.log('user signed out')
         localStorage.clear();
         window.location.replace('index.html')
 
     } catch (error) {
-        console.log(error.message)
+        // console.log(error.message)
     }
 });
 
@@ -106,7 +106,7 @@ function edittext(e) {
     updatebtn.style.display = "inline"
     input.focus()
     selectedItem = e.parentNode.childNodes[1]
-    console.log(selectedItem)
+    // console.log(selectedItem)
 
     // var inputfield  = document.createElement("input")
     // e.parentNode.childNodes[1].remove()
@@ -220,9 +220,10 @@ async function getItem() {
                 for (var item of values) {
                     SetFirstTime(item);
                 }
-            } else {
-                console.log("No data available for this user.");
             }
+            //  else {
+            //     // console.log("No data available for this user.");
+            // }
         })
         .catch((e) => {
             console.log(e);
